@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 1614618817}
   - component: {fileID: 1614618816}
   m_Layer: 5
-  m_Name: Exit_button
+  m_Name: Back_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 2023950687}
   - component: {fileID: 2023950686}
   m_Layer: 5
-  m_Name: Exit_text
+  m_Name: Back_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 2123122321}
   - component: {fileID: 2123122320}
   m_Layer: 0
-  m_Name: Img_menu_3
+  m_Name: MainBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
