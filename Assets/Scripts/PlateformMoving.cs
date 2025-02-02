@@ -2,24 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlateformeMoving : MonoBehaviour
+public class PlateformMoving : MonoBehaviour
 {
     public float scrollSpeed = 2f;
-    private Vector3 startPos;
-    public GameObject Plateform;
-
+    // Start is called before the first frame update
     void Start()
     {
-        startPos = Plateform.transform.position;
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-        Plateform.transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
+        transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
 
-        if (Plateform.transform.position.x < -8.57)
+        if (transform.position.x < -8.57)
         {
-            Plateform.transform.position = startPos;
+            Destroy(gameObject);
         }
     }
 }
