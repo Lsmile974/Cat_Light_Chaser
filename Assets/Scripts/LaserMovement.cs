@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static PauseMenu;
 
 public class Pointeur_Move : MonoBehaviour
 {
     public int Floor = 1;
     public bool MoveUp = true;
+    public GameObject laser;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class Pointeur_Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetKeyDown(KeyCode.Space))
+      if (Input.GetKeyDown(KeyCode.Space) && !gamePaused)
         {
             if (Floor == 2){
                 MoveUp = false;
@@ -26,11 +28,11 @@ public class Pointeur_Move : MonoBehaviour
             }
             if (MoveUp){
                 Floor += 1;
-                transform.position = new Vector3(transform.position.x, transform.position.y +3, transform.position.z);
+                laser.transform.position = new Vector3(laser.transform.position.x, laser.transform.position.y +3, laser.transform.position.z);
             }
             else{
                 Floor -= 1;
-                transform.position = new Vector3(transform.position.x, transform.position.y -3, transform.position.z);
+                laser.transform.position = new Vector3(laser.transform.position.x, laser.transform.position.y -3, laser.transform.position.z);
             }
             Debug.Log("Space key was pressed.");
         }
