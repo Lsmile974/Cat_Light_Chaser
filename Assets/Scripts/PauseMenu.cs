@@ -8,6 +8,9 @@ public class PauseMenu : MonoBehaviour
     public static bool gamePaused = false;
     public AudioSource levelMusic;
     public AudioSource pauseMusic;
+    void Start(){
+        Time.timeScale = 1;
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)){

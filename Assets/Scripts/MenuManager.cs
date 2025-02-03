@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonManager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     public void GoMainMenu()
     {
