@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlateformMoving : MonoBehaviour
+public class Scrolling : MonoBehaviour
 {
     public float scrollSpeed = 2f;
     // Start is called before the first frame update

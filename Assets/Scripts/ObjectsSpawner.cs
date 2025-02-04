@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static WinLevel1;
 
 public class ObjectsSpawner : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class ObjectsSpawner : MonoBehaviour
     {
         while (true)
         {
+            if(ending){
+                yield break;
+            }
             int num = Random.Range(0, 3);
             if (num == 0){
                 GameObject obj1 = Instantiate(object1);

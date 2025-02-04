@@ -15,6 +15,7 @@ public class CatMovement : MonoBehaviour
             StartCoroutine(Wait());
         }
     }
+    
     IEnumerator Wait(){
         isMoving = true;
         Debug.Log("Avant");

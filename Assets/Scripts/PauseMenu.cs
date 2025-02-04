@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static CatTrigger;
+using static WinLevel1;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,9 +10,12 @@ public class PauseMenu : MonoBehaviour
     public static bool gamePaused = false;
     public AudioSource levelMusic;
     public AudioSource pauseMusic;
+    void Start(){
+        Time.timeScale = 1;
+    }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) && !gameIsOver && !ending){
             if (gamePaused){
                 Resume();
             }

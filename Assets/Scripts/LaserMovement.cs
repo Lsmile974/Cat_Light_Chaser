@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using static PauseMenu;
 
-public class Pointeur_Move : MonoBehaviour
+public class LaserMovement : MonoBehaviour
 {
     public int Floor = 1;
     public bool MoveUp = true;
