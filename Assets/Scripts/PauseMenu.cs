@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static CatTrigger;
+using static WinLevel1;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) && !gameIsOver && !ending){
             if (gamePaused){
                 Resume();
             }

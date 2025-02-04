@@ -5,13 +5,18 @@ using static CatTrigger;
 
 public class GameOver : MonoBehaviour
 {
+    private bool once =true;
     public GameObject deathMenu;
     public AudioSource levelMusic;
     public AudioSource deathMusic;
+    void Start(){
+        once = true;
+    }
     void Update()
     {
-        if(gameIsOver){
+        if(gameIsOver && once){
             Over();
+            once = false;
         }
     }
     void Over(){
